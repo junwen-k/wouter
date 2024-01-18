@@ -28,10 +28,11 @@ const subscribeToLocationUpdates = (callback) => {
 export const useLocationProperty = (fn, ssrFn) =>
   useSyncExternalStore(subscribeToLocationUpdates, fn, ssrFn);
 
-const currentSearch = () => location.search;
-
 export const useSearch = ({ ssrSearch = "" } = {}) =>
-  useLocationProperty(currentSearch, () => ssrSearch);
+  useLocationProperty(
+    () => location.search,
+    () => ssrSearch
+  );
 
 export const useSearchParams = ({ ssrSearch = "" } = {}) => {
   const search = useSearch({ ssrSearch });
