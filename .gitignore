@@ -8,7 +8,7 @@ node_modules/
 *.code-workspace
 
 # bundler
-esm/
+# esm/
 .cache
 
 # OSX
