@@ -7,6 +7,7 @@
     "packages/wouter",
     "packages/wouter-preact"
   ],
+  "main": "dist/index.js",
   "scripts": {
     "fix:p": "prettier --write './**/*.(js|ts){x,}'",
     "test": "vitest",
